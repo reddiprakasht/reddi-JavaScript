@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container mt-5 text-muted">
+        <h1 class="display-5">T REDDI PRAKASH</h1>
+        <div class="mb-3">
+            <label for="input-x" class="form-label">Enter value for x:</label>
+            <input type="text" class="form-control" id="input-x">
+        </div>
+        <div class="mb-3">
+            <label for="input-y" class="form-label">Enter value for y:</label>
+            <input type="text" class="form-control" id="input-y">
+        </div>
+        <h3 id="color">Hello <span class="text-warning" id="display-x">[x]</span>, welcome to the new subject of <span class="text-danger" id="display-y">[y]</span></h3>
+    </div>
+
+    <script>
+        // Function to update the displayed content
+        function updateContent() {
+            // Get the values from the input fields
+            var x = document.getElementById("input-x").value;
+            var y = document.getElementById("input-y").value;
+            
+            // Update the displayed content with the entered values
+            document.getElementById("display-x").textContent = x;
+            document.getElementById("display-y").textContent = y;
+            
+            // Save the values to localStorage
+            localStorage.setItem('x', x);
+            localStorage.setItem('y', y);
+        }
+
+        // Function to initialize values from localStorage
+        function initializeValues() {
+            var savedX = localStorage.getItem('x') || "";
+            var savedY = localStorage.getItem('y') || "";
+            
+            document.getElementById("input-x").value = savedX;
+            document.getElementById("input-y").value = savedY;
+            
+            // Update the displayed content with the saved values
+            document.getElementById("display-x").textContent = savedX;
+            document.getElementById("display-y").textContent = savedY;
+        }
+
+        // Initialize the values when the page loads
+        initializeValues();
+
+        // Attach event listeners to input fields
+        document.getElementById("input-x").addEventListener("input", updateContent);
+        document.getElementById("input-y").addEventListener("input", updateContent);
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,74 @@
+Practice 
+
+
+8th June:
+---------------------------------------------------------------------------------------------
+
+push example
+-------------------------------------
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1 id="pushh">JavaScript Arrays</h1>
+
+
+
+
+		<script>
+        
+            let stu=prompt("enter first name")
+        	let stu1=prompt("enter second name")
+                
+			const students = ["ajay", "bharat", "deepak", "Fazal" "Ganesh"];
+
+			students.push(stu);
+            students.push(stu1);
+            
+            document.getElementById("pushh").innerHTML=students
+            
+            
+
+		</script>
+
+
+</body>
+</html>
+
+
+
+shift example :
+--------------------------------------------
+
+
+
+Random & Floor task :
+
+------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1 id="pushh">JavaScript Arrays</h1>
+
+
+
+
+		<script>
+        
+            let stu=prompt("enter first name")
+        
+               let x=Math.random()*stu
+			
+
+			document.write(Math.floor(x))
+            
+            document.getElementById("pushh").innerHTML=students
+            
+            
+
+		</script>
+
+
+</body>
+</html>

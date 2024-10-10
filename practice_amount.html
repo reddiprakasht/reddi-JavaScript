@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interest Calculator</title>
+    <style>
+        .table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        .table, .table th, .table td {
+            border: 1px solid black;
+        }
+        .table th, .table td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Prompt user for inputs
+        var p_amt = parseFloat(prompt("Enter principal amount"));
+        var roi = parseFloat(prompt("Enter rate of interest"));
+
+        // Calculate interest
+        var result = (p_amt * roi / 100);
+
+        // Display results in a table
+        document.write(
+            "<table class='table'>" +
+            "<tr><th>Principal Amount</th><th>Rate of Interest</th><th>Result</th></tr>" +
+            "<tr><td>" + p_amt.toFixed(2) + "</td><td>" + roi.toFixed(2) + "</td><td>" + result.toFixed(2) + "</td></tr>" +
+            "</table>"
+        );
+    </script>
+</body>
+</html>

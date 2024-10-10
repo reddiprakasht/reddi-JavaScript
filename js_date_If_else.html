@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>objects</h1>
+
+    <h2 id="td">Today</h2>
+
+    
+    <script>
+     //    let obj=new Date()
+     //    let d=obj.getDay()
+
+     //   if(d==0){
+     //        alert("Sunday")
+     //    }else if (d==1){
+     //         alert("Monday")
+     //    }else if (d==2){
+     //         alert("Tuesday")
+     //    }else if (d==3){
+     //         alert("wednesday")
+     //    }else if (d==4){
+     //         alert("Thursday")
+     //    }else if (d==5){
+     //         alert("Friday")
+     //    }else if (d==6){
+     //         alert("Saturday")
+     //    }
+
+        
+     // document.write(d)
+
+
+        let obje=new Date()
+        let dd=obje.getDay()
+
+       if(dd==0){
+           document.getElementById("td").innerHTML="sunday"
+        }else if (dd==1){
+            document.getElementById("td").innerHTML="monday"
+        }else if (dd==2){
+             document.getElementById("td").innerHTML="Tuesday"
+        }else if (dd==3){
+              document.getElementById("td").innerHTML="Wednewday"
+        }else if (dd==4){
+            document.getElementById("td").innerHTML="Thursday"
+        }else if (dd==5){
+              document.getElementById("td").innerHTML="friday"
+        }else if (dd==6){
+             document.getElementById("td").innerHTML="saturday"
+        }
+
+        // here first 4 is from alert and second is from get element by id
+
+        document.write(dd)
+
+    </script>
+</body>
+</html>

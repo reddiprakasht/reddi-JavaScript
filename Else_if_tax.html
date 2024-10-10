@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+
+</head>
+<body class="container">
+    
+<table class="table">
+    <tr>
+        <td>Salary</td>
+        <td>Tax Amount</td>
+        <td>Take home Salary</td>
+    </tr>
+
+    <tr>
+        <td id="S"></td>
+        <td id="T"></td>
+        <td id="H"></td>
+    </tr>
+</table>
+
+<!-- <script>
+    let salary=prompt("enter salary")
+
+    document.getElementById("S").innerHTML=salary
+
+    if (salary<30000){
+    document.getElementById("T").innerHTML="No tax"
+    document.getElementById("H").innerHTML=salary
+    }else if (salary=>30000 && salary<=40000){
+        document.getElementById("T").innerHTML=salary*(5/100)
+        document.getElementById("H").innerHTML=salary-salary*(5/100)
+    }
+    else if (salary>40000 && salary<=50000){
+        document.getElementById("T").innerHTML=salary*(8/100)
+        document.getElementById("H").innerHTML=salary-salary*(8/100)
+    }
+    else if (salary>50000){
+        document.getElementById("T").innerHTML=salary*(10/100)
+        document.getElementById("H").innerHTML=salary-salary*(10/100)
+    }
+
+</script> -->
+
+<script>
+    let salary=prompt("enter the salary")
+    document.getElementById("S").innerHTML=salary
+
+    if (salary <=35000){
+        document.getElementById("T").innerHTML="NoTax"
+    }else if (salary<=45000){
+        document.getElementById("T").innerHTML=(salary*5)/100
+        document.getElementById("H").innerHTML=salary-(salary*5)/100
+    }else if (salary<=55000){
+        document.getElementById("T").innerHTML=(salary*10)/100
+        document.getElementById("H").innerHTML=salary-(salary*10)/100
+    }else if (salary<=65000){
+        document.getElementById("T").innerHTML=(salary*15)/100
+        document.getElementById("H").innerHTML=salary-(salary*15)/100
+    }else if (salary<=75000){
+        document.getElementById("T").innerHTML=(salary*20)/100
+        document.getElementById("H").innerHTML=salary-(salary*20)/100
+    }else if (salary>=75000 && salary<=150000){
+        document.getElementById("T").innerHTML=(salary*30)/100
+        document.getElementById("H").innerHTML=salary-(salary*30)/100
+    }
+</script>
+
+
+
+</body>
+</html>

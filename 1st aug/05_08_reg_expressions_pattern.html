@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- so here pattern has the default action to display error  followed by title-->
+
+    <!-- <div>
+        <form action="">
+            country code :
+            <input type="text" name="country_code" pattern="[0-9]{3}" title="three letter country_code">
+            <input type="submit">
+        </form>
+    </div> -->
+<form action="">
+    <div>
+        <input id="pas" type="text" name="pw" placeholder="password" 
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8}" title="Must contain atleast one number 
+        and one Upper case and one lower case. andat leastr 8 or more chhare" >
+
+        <input type="submit" name="" id="" onclick="validatepassword()">
+    </div>
+
+</form>
+    
+
+    <script>
+
+        function validatepassword() {
+            var passwordinput = document.getElementById("pas");
+            var pattern = new RegExp(passwordinput.pattern);
+
+            if (pattern.test(passwordinput.value)){
+                alert("password changed successfully")
+            }else {
+                
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>

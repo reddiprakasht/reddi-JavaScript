@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> location.href</h1>
+
+
+    <select id="url" onchange="demo()">
+        <option value="https://w3schools.com">w3schools</option>
+        <option value="https://google.com">google</option>
+        <option value="https://getbootstrap.com">bootstrap</option>
+        <option value="https://fonts.google.com">googlefonts</option>
+        <option value="https://instagram.com">instagram</option>
+    </select>
+
+<!-- so we are using this to redirecting the pages without clicking -->
+
+<!-- 
+    <script>
+        window.location.href="https://w3schools.com"
+    </script> -->
+
+
+<script>
+   function demo() {
+    let x=document.getElementById("url").value
+    window.location.href=x
+   }
+   
+</script>
+
+
+</body>
+
+</html>

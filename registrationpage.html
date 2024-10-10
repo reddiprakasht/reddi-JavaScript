@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            background-image: url(images/pexels-wendywei-1190299.jpg);
+            background-size: cover;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .form-control {
+            background-color: #333;
+            color: #fff;
+            border: 1px solid #444;
+        }
+        .form-control:focus {
+            background-color: #333;
+            color: #fff;
+            border-color: #555;
+            box-shadow: none;
+        }
+        .btn {
+            border-radius: 0;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .text-danger {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card bg-dark text-white">
+                    <div class="card-header">
+                        <h4 class="card-title">Login</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <label for="loginUsername">Username</label>
+                                <input type="text" class="form-control" id="loginUsername" placeholder="Enter username">
+                                <small id="loginUsernameError" class="form-text text-danger"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="loginPassword">Password</label>
+                                <input type="password" class="form-control" id="loginPassword" placeholder="Enter password">
+                                <small id="loginPasswordError" class="form-text text-danger"></small>
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="login()">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+        function login() {
+            // Get form values
+            var username = document.getElementById("loginUsername").value.trim();
+            var password = document.getElementById("loginPassword").value;
+
+            // Clear previous errors
+            document.getElementById('loginUsernameError').textContent = '';
+            document.getElementById('loginPasswordError').textContent = '';
+
+            let hasError = false;
+
+            // Validation
+            if (!username) {
+                document.getElementById('loginUsernameError').textContent = 'Username is required.';
+                hasError = true;
+            }
+            if (!password) {
+                document.getElementById('loginPasswordError').textContent = 'Password is required.';
+                hasError = true;
+            }
+
+            if (!hasError) {
+                // Retrieve stored users
+                const users = JSON.parse(localStorage.getItem('users')) || [];
+                
+                // Check if user credentials match any stored user
+                const user = users.find(u => u.username === username && u.password === password);
+                
+                if (user) {
+                    // Redirect to home page or dashboard
+                    window.location.href = 'login.html'; // Update with the actual path of your home page
+                } else {
+                    // User not found
+                    document.getElementById('loginPasswordError').textContent = 'Invalid username or password.';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

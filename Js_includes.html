@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mouritech</h1>
+
+    <h2 id="txt"></h2>
+
+    <script>
+        let x=("Java is a dynamic word")
+        let y=prompt("enter word")
+        let z=x.includes(y)
+
+        
+        if(z==true){
+            document.getElementById("txt").innerHTML="available"
+        } else{
+            document.getElementById("txt").innerHTML="not available"
+        }
+    </script>
+</body>
+</html>

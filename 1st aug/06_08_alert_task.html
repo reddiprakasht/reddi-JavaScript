@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- <div>
+        <h1 id="noq">No. of Qwuestions</h1>
+        <h3>what is the color of the apple?
+            <input type="radio" name="" id="red" value="">Red
+            <input type="radio" name="" id="green">Green
+            <input type="radio" name="" id="yellow">Yellow
+            <input type="radio" id="orange">Orange
+
+            <input type="submit" onclick="questionA()">
+        </h3>
+
+        <h3>what is the color of the bananna?
+            <input type="radio" name="" id="red" value="">Red
+            <input type="radio" name="" id="green">Green
+            <input type="radio" name="" id="yellow">Yellow
+            <input type="radio" id="orange">Orange
+
+            <input type="submit" onclick="questionB()">
+        </h3>
+        <h3>what is the color of the grapes?
+            <input type="radio" name="" id="red" value="">Red
+            <input type="radio" name="" id="green">Green
+            <input type="radio" name="" id="yellow">Yellow
+            <input type="radio" id="orange">Orange
+
+            <input type="submit" onclick="questionC()">
+        </h3>
+
+    </div>
+
+    <script>
+
+        function questionA() {
+            const redbox = document.getElementById('red')
+            const greenbox = document.getElementById('green')
+            const yellowbox = document.getElementById('yellow')
+            const orangebox = document.getElementById('orange')
+            if (redbox.checked) {
+                alert("correct")
+            } else if (greenbox.checked || yellowbox.checked || orangebox.checked) {
+                alert("wrong")
+            }
+        }
+
+        function questionB (){
+            const redbox = document.getElementById('red')
+            const greenbox = document.getElementById('green')
+            const yellowbox = document.getElementById('yellow')
+            const orangebox = document.getElementById('orange')
+            if (yellowbox.checked) {
+                alert("correct")
+            } else if (greenbox.checked || redbox.checked || orangebox.checked) {
+                alert("wrong")
+            }
+
+        }
+
+        function questionC (){
+            const redbox = document.getElementById('red')
+            const greenbox = document.getElementById('green')
+            const yellowbox = document.getElementById('yellow')
+            const orangebox = document.getElementById('orange')
+            if (greenbox.checked) {
+                alert("correct")
+            } else if (yellowbox.checked || redbox.checked || orangebox.checked) {
+                alert("wrong")
+            }
+
+        }
+        
+    </script>
+
+
+    <!-- <script>
+            alert(3)
+            alert("color of the apples?")
+            // for (i=0; i <=3; i++) {
+                
+            // }
+        </script>
+     -->
+ -->
+
+
+ <div>
+    <form action="">
+
+        
+    <h1 id="noq">No. of Questions</h1>
+
+    <h3>What is the color of the apple?</h3>
+    <input type="radio" name="apple" id="apple-red" value="red"><span>Red</span>
+    <input type="radio" name="apple" id="apple-green"><span>Green</span>
+    <input type="radio" name="apple" id="apple-yellow"><span>Yellow</span>
+    <input type="radio" name="apple" id="apple-orange"><span>orange</span>
+    <input type="button" name="" id="" onclick="questionA()">
+
+
+    <h3>What is the color of the banana?</h3>
+    <input type="radio" name="banana" id="banana-red" value="red"><span>Red</span>
+    <input type="radio" name="banana" id="banana-green"><span>Green</span>
+    <input type="radio" name="banana" id="banana-yellow"><span>Yellow</span>
+    <input type="radio" name="banana" id="banana-orange"><span>Orange</span>
+   <input type="button" onclick="questionB()">
+
+    <h3>What is the color of the grapes?</h3>
+    <input type="radio" name="grapes" id="grapes-red" value="red"><span>Red</span>
+    <input type="radio" name="grapes" id="grapes-green"><span>Green</span>
+    <input type="radio" name="grapes" id="grapes-yellow"><span>Yellow</span>
+    <input type="radio" name="grapes" id="grapes-orange"><Span>Orange</Span>
+    <input type="button" onclick="questionC()" value="submit grapes">
+    <!-- //<button onclick="questionC()">Submit Grapes</button> -->
+ 
+</form>
+</div>  
+
+<script>
+    function questionA() {
+        const redbox = document.getElementById('apple-red');
+        const greenbox = document.getElementById('apple-green');
+        const yellowbox = document.getElementById('apple-yellow');
+        const orangebox = document.getElementById('apple-orange');
+
+        if (redbox.checked) {
+            alert("Correct");
+        } else {
+            alert("Wrong");
+        }
+    }
+
+    function questionB() {
+        const yellowbox = document.getElementById('banana-yellow');
+        const greenbox = document.getElementById('banana-green');
+        const redbox = document.getElementById('banana-red');
+        const orangebox = document.getElementById('banana-orange');
+
+        if (yellowbox.checked) {
+            alert("Correct");
+        } else {
+            alert("Wrong");
+        }
+    }
+
+    function questionC() {
+        const greenbox = document.getElementById('grapes-green');
+        
+        if (greenbox.checked) {
+            alert("correct")
+            document.getElementById("grapes-green").style.color="green"
+            document.getElementById("grapes-orange").style.color="red"
+            document.getElementById("grapes-yellow").style.color="red"
+            document.getElementById("grapes-red").style.color="red"
+        } else {
+           
+        
+        }
+    }
+
+    
+// function questionC() {
+//     const greenbox = document.getElementById('grapes-green');
+//     const redbox = document.getElementById('grapes-red');
+//     const yellowbox = document.getElementById('grapes-yellow');
+//     const orangebox = document.getElementById('grapes-orange');
+
+//     // Reset all colors to default
+//     greenbox.style.color = "";
+//     redbox.style.color = "";
+//     yellowbox.style.color = "";
+//     orangebox.style.color = "";
+
+//     // Change color based on the checked status of greenbox
+//     if (greenbox.checked) {
+//         greenbox.style.color = "green";
+//     } else {
+//         redbox.style.color = "red";
+//         yellowbox.style.color = "red";
+//         orangebox.style.color = "red";
+//     }
+// }
+
+</script>
+
+
+
+</body>
+
+</html>

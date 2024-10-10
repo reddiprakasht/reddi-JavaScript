@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Image Selector</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .fruit-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="mt-5">Select a Fruit</h1>
+    <div class="form-group">
+        <label for="fruitSelect">Choose a fruit:</label>
+        <select id="fruitSelect" class="form-control">
+            <option value="">-- Select Fruit --</option>
+            <option value="banana">Banana</option>
+            <option value="grapes">Grapes</option>
+            <option value="guava">Guava</option>
+        </select>
+    </div>
+
+    <div id="imageContainer" class="text-center">
+ 
+        <img id="fruitImage" class="fruit-image" style="display:none;">
+    </div>
+</div>
+
+<!-- Bootstrap JS and Dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    const fruitSelect = document.getElementById('fruitSelect');
+    const fruitImage = document.getElementById('fruitImage');
+    const imageContainer = document.getElementById('imageContainer');
+
+    fruitSelect.addEventListener('change', function() {
+        const selectedFruit = this.value;
+        if (selectedFruit) {
+            fruitImage.style.display = 'block';
+            switch (selectedFruit) {
+                case 'banana':
+                    fruitImage.src = 'https://www.thehealthy.com/wp-content/uploads/2022/01/GettyImages-1046941212-MLedit.jpg';
+                    break;
+                case 'grapes':
+                    fruitImage.src = 'https://5.imimg.com/data5/VU/MR/MY-24751011/purple-grapes.jpg';
+                    break;
+                case 'guava':
+                    fruitImage.src = 'https://malabardirect.com/cdn/shop/products/guava.jpg?v=1601575362';
+                    break;
+                default:
+                    fruitImage.style.display = 'none';
+            }
+        } else {
+            fruitImage.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>

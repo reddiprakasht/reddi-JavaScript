@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Overlay on Image with Bootstrap</title>
+  <!-- Include Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Optional: Custom styles for text overlay */
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+    .overlay-text h1 {
+      font-size: 3rem;
+    }
+    .overlay-text p {
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="position-relative">
+        <img src="images/intro.jpg" class="img-fluid" alt="Image">
+        <div class="overlay-text">
+          <h1 class="text-white">Text Over Image</h1>
+          <p class="text-white">Your descriptive text here</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Include Bootstrap JS and any additional scripts if needed -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

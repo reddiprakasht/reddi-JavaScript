@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+
+        body{
+            background-image: url(images/pexels-valdemaras-d-784301-1647962.jpg);
+            background-size: cover;
+        }
+           
+        
+        h2{
+            color: gold;
+            font-weight: 100;
+        }
+        .div {
+            margin: auto;
+            height: 400px;
+            width: 300px;
+            color: white;
+            background: url(images/pexels-vladbagacian-1061623.jpg);
+            text-align: center;
+            border-radius: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            backdrop-filter: blur(30px);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+            border: 2px solid rgb(160, 160, 39);
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        
+        }
+
+        input:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: rgb(255, 215, 0); /* Optional: change border color on focus */
+}
+
+        input {
+            padding: 0px 10px;
+            background: rgba(119, 241, 231, 0.3);
+            height: 40px;
+            border: 2px solid rgb(189, 226, 24);
+            border-radius: 20px;
+            line-height: 0px;
+            border: none;
+            color: rgb(8, 7, 7);
+            
+        }
+        input::placeholder{
+            color: rgb(82, 81, 76);
+        }
+
+        form {
+            box-sizing: border-box;
+            /* display: block; */
+            box-sizing: border-box;
+            padding: 10px;
+            width: 80%;
+            height: 90%;
+            /* backdrop-filter: brightness(60%); */
+            flex-direction: column;
+            display: flex;
+            border-radius: 10px;
+            border: 0px;
+            
+        }
+        .one{
+            width: 40%;
+            margin: auto;
+            margin-top: 10px;
+            color: white;
+            background-color: gray;
+            border: 1px;
+            border: solid rgba(202, 200, 200, 0.87);
+            
+        }
+
+        .one:hover{
+            background-color: rgb(68, 68, 66);
+
+        }
+        span{
+            color: red;
+            font-size: xx-small;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+
+        <form action="div">
+            <h2>Login Now</h2>
+            <input type="text" name="" id="uid" placeholder="User ID">
+            <br>
+            <br>
+            <input type="password"  id="psw" placeholder="password">
+            <br>
+            <span id="wrngpass"></span>
+            <input type="button" class="one" name="" id="login" value="Login">
+            <br>
+            <br>
+        </form>
+    </div>
+
+
+<a href="06_08_quiz_arrays.html"></a>
+
+    <script>
+
+        const demo = () => {
+
+            var x = document.getElementById("uid").value
+            var y = document.getElementById("psw").value
+
+            if (x == "niranjan1997" && y == "mouri@1997") {
+                window.location.href = "06_08_quiz_arrays.html";
+            } else {
+                //alert("You entered the wrong password or User ID");
+                document.getElementById('wrngpass').innerHTML="*you have entered wrong password or UserID"
+            }
+        }
+        document.getElementById("login").addEventListener("click", demo);
+
+
+    </script>
+</body>
+
+</html>

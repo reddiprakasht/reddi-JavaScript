@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <h1 id="otp"></h1>
+    </div>
+    
+    <script>
+        function generateOTP() {
+    const otpp = Math.floor(100000 + Math.random() * 900000);
+    return otpp;
+}
+
+const otpp = generateOTP();
+ 
+// console.log(otp);
+document.getElementById('otp').innerHTML= 'your OTP is ' + otpp
+
+    </script>
+</body>
+</html>

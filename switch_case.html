@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2 id="txt"></h2>
+
+    <script>
+        let obj=new Date()
+        let day=obj.getDay()
+
+        switch(day){
+            case 0:
+                
+            document.getElementById("txt").innerHTML="sunday"
+            break
+
+            case 1:
+                document.getElementById("txt").innerHTML="monday"
+                break
+
+                case 2:
+                    document.getElementById("txt").innerHTML="tuesday"
+                    break
+                    case 3 :
+                    document.getElementById("txt").innerHTML="wednesday"
+                    break
+
+                    case 7:
+                        document.getElementById("txt").innerHTML="thursday"
+                        break
+
+                        case 5:
+                            document.getElementById("txt").innerHTML="friday"
+                            break
+
+                            case 6:
+                                document.getElementById("txt").innerHTML="saturday"
+
+                                default :
+
+                                alert("not any day")
+
+
+
+        }
+        
+
+
+    </script>
+</body>
+</html>

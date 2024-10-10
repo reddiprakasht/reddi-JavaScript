@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array</h1>
+    <h3 id="car"></h3>
+    <!-- <script>
+        const cars=["valvo","bmw", "TATA", "KIA", "Toyota"]
+        document.write(cars[0]+"</br>")
+        document.write(cars[1]+"</br>")
+        document.write(cars[2]+"</br>")
+        document.write(cars[3]+"</br>")
+        document.write(cars[4]+"</br>")
+    </script> -->
+
+<script>
+    const cars=["valvo","bmw", "TATA", "KIA", "Toyota"]
+    const carslist=cars.join("<br>")
+    document.getElementById("car").innerHTML=carslist
+    
+</script>
+</body>
+</html>

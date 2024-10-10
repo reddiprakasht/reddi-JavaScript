@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- 
+    <script>
+        alert(3)
+        let x=prompt("color of an apple? \n a)green  \n b)red  \n c)yellow")
+       
+         let result=0
+        //let que=[]
+        if (x=="b") {
+            alert("correct")
+            result++
+        }
+        else{
+            alert("Wrong")
+        }
+
+        let y=prompt("who is the PM of India? \n a)Mohal Lal  \n b) Modi Ji  \n c) Bhajan Lal")
+        
+
+        //let que=[]
+        if (y=="b") {
+            alert("correct")
+            result++
+        }
+        else{
+            alert("Wrong")
+        }
+        
+        let z=prompt("what is the capital of arunachal pradesh \n a)sikkim  \n b) mizorum \n c)dispur")
+
+        //let que=[]
+        if (z=="a") {
+            alert("correct")
+            result++
+        }
+        else{
+            alert("Wrong")
+        }
+        alert(result + " out of the 3 were correct") -->
+
+
+
+    <script>
+
+    
+
+        const questions = [
+            {
+                q: "color of an apple? \n a)green \n b)red \n c)yellow",
+                answer: "b"
+            },
+            {
+                q: "who is the PM of India? \n a)Mohal Lal \n b) Modi Ji \n c) Bhajan Lal",
+                answer: "b"
+            },
+            {
+                q: "what is the capital of Arunachal Pradesh? \n a)sikkim \n b)mizorum \n c)dispur",
+                answer: "c"
+            }
+        ];
+
+
+        var score = 0;
+        alert(questions.length)
+        for (var i = 0; i < questions.length; i++) {
+            var response = prompt(questions[i].q);
+            if (response == questions[i].answer) {
+                score++;
+                alert("correct");
+            } else {
+                alert("wrong");
+            }
+        }
+
+        alert("you got " + score + "/" + questions.length)
+
+
+    </script>
+
+
+    <!-- <script>
+
+        alert(3);
+
+        const questions = [
+            {
+                question: "color of an apple? \n a)green \n b)red \n c)yellow",
+                correctAnswer: "b"
+            },
+            {
+                question: "who is the PM of India? \n a)Mohal Lal \n b) Modi Ji \n c) Bhajan Lal",
+                correctAnswer: "b"
+            },
+            {
+                question: "what is the capital of Arunachal Pradesh? \n a)sikkim \n b)mizorum \n c)dispur",
+                correctAnswer: "c"
+            }
+            
+        ];
+
+        let result = 0;
+
+        questions.forEach(q => {
+            const userAnswer = prompt(q.question);
+            if (userAnswer === q.correctAnswer) {
+                alert("correct");
+                result++;
+            } else {
+                alert("Wrong!");
+            }
+        });
+
+        alert(result + " out of 3 were correct");
+    </script> -->
+
+
+</body>
+
+</html>

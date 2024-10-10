@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>objects</h1>
+
+
+    <script>
+
+        let obj = new Date()
+        let h = obj.getHours()
+        let m = obj.getMinutes()
+        let s = obj.getSeconds()
+        let d = obj.getDay()
+        let y = obj.getFullYear()
+        let mn = obj.getMonth()
+        let date = obj.getDate()
+
+        // document.write(h+":"+m+":"+s+":"+d+":"+y+":"+mn)
+
+
+        // document.write(d+y+mn)
+
+        // withtemplate literals
+
+        document.write(`${date} : ${mn} : ${y}`)
+
+   
+
+    </script>
+</body>
+
+</html>

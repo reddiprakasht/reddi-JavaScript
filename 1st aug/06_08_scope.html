@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- 
+    <script>
+
+        //scope
+        {
+            //only var will work here when we called outside of the curly braces
+            // here let and const are not work outside function
+
+
+            //var x="javascript"
+            //let x="javascript"
+            const x="javascript"
+
+            console.log(x)
+
+        }
+        console.log("hello " + x)
+    </script> -->
+
+
+<!-- <script>
+
+    //global scope
+
+    // here we declare let var and const outside of the function
+    //  or curly braces then it became global variable and we can access insicde and outside of the functions, no issues 
+
+    //var x="javascript"
+    //let x="javascript"
+    const x= "javascript"
+
+
+    function demo() {
+        document.write("hello " + x)
+    }
+    demo()
+
+
+</script> -->
+
+<script>
+
+    // local scope
+
+
+
+    function demo () {
+        
+    //var x="javascript"
+    //let x="javascript"
+    const x= "javascript"
+
+    document.write("hello " + x)
+
+    }
+    demo()
+    console.log(x)
+
+    //so if we declared variables inside of the fucntion we cann't called outside of the function
+    //here console.log(x) will refer to a reference error
+
+</script>
+
+<h1>
+
+    reference error ?
+    it means we are refering that is not defined
+    
+</h1>
+
+
+</body>
+</html>

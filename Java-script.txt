@@ -1,0 +1,192 @@
+18th June :
+=========================================================================================
+				
+					JAVASCRIPT:
+--------------------------------------------------------------------------------------
+
+
+JavaScript is a scripting language used to develop web pages. Developed in Netscape, JS allows developers to create a dynamic and interactive web page to interact with visitors and execute complex actions.
+
+	JavaScript is used for 
+		Dynamic web apps
+		interactive web apps
+		and validations
+			
+				----clint side  
+				----
+
+
+<body>
+    <h1>JavaScript</h1>
+
+    <script>
+       
+        document.write('<h1 style="text-align:center;">Javascript is Dynamic </h1>')
+
+        // double quatation inside single quatation or vise versa
+
+        document.write("<h1 style='text-align:center;'>Javascript is Dynamic </h1>")
+    </script>
+    
+</body>
+
+
+
+20th June :
+=================================
+
+popup box
+	alert()
+	prompt()
+	confirm()
+
+
+Comments :
+==========================
+
+same as CSS
+
+// -----------single line comments
+/* */  -------multiline comments
+
+<!--   -->          html comments
+
+
+
+Console :
+---------------------------------------------------------------
+
+In  programming, a console is a text based interface that allows you to interact with the computer's operating system or run the Code. with the console, you can write and execute commands or programs. it is also used for debugging and troubleshooting
+
+console.log :
+-------------------
+console. log() is an important function in JavaScript that is used for printing messages to the console. It helps developers debug their code by displaying the output of their program in the console.
+
+
+Variables :
+
+-------------------------------------------------------
+
+what are variables in JavaScript ?
+ variables are containers for storing information. A variable is a "named storage" for data. We csn use variables to store user id , password, age and other data.
+
+creating a variable in JavaScript is called "declaring" a variable;
+
+		var uid;
+
+After the declaration, the variable is empty (it has no value).
+
+
+Declaring a variable and assigning a value is important --------------------------------
+
+and variables in JS can be declared using 3 key words 
+							i.e , var
+								let
+								const
+
+				ex :
+					var x =>declaring variable
+				
+						x="Mouritech"  ==>assigning a data value
+
+
+
+
+
+ Data types :
+-================================
+string
+bolean
+
+
+
+
+
+
+
+24th June :
+===================================
+
+Concatination :
+
+----concatenation is used join two or more strings
+-----we use "+" symbol for string concatenation
+---ex:
+
+	var first_name="Anil"
+	var Second_name="Kumar"
+
+	document.write(First_name + last_name)
+
+
+25th June :
+-------------------------------------------------------------------
+
+Operators*******************
+
+1)Arithmetic operator
+	
+	+,-,+,*,/,%
+
+2) Assignment operator
+
+	=
+
+3) Conditional operator
+
+	<=, >=,!=,==,===
+
+4) Logical operator
+
+	&&, ||
+
+
+
+what is the use of DOM in JavaScript?
+------------------------------------------------------------------------------------
+
+DOM stands for Document Object Model. It is a programming language interface that allows us to create, change, or  remove elements from the document. we can also add events to those elements to make our page more dynamic. the Dom views an HTML document as a tree of nodes.
+
+when a web page is loaded, the browser creates a Document Object Model of the page.
+
+The HTML DOM modek is constructed as a tree of Objects :
+	
+	The HTML elements as objects
+
+with the object model, JavaScript gets all the power it needs to create dynamic HTML :
+
+JavaScript can change all the HTML elements in the page
+JavaScript can change all the HTML attributes in the page
+JavaScript can change all the CSS styles in the page
+JavaScript can remove existing HTML elements and attributes
+JavaScript can add new HTML elements and attributes
+JavaScript can react to all existing HTML events in the page
+JavaScript can create new HTML events in the page
+
+
+getElementById() 
+===================================================
+The getElementById() menthod returns the element that have given a n ID which is passed to the function. This function is a widely used HTML DOM method in web designing  to change the value of any particular element or get a particular element. If the passed ID to the function does not exists then it returns null.
+
+Note: Each ID needs to be unique. if there are multiple elements by the same I, only the first one will be returned.
+
+
+
+Array :=
+==========================================================
+The array object is used to store the multiple values in a single variable.
+
+Example 
+
+Const cars["volvo","vagon","bmw"]
+
+Accessing array elements :
+You access an array element by referring to the index number 
+
+indexing start from 0
+[0] is the first element.
+[1] is the second element
+
+cars[0]
+cars[1]
+

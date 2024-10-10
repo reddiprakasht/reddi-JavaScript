@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <h1 id="p"></h1>
+
+    see W3schools for more patterns like $* etc
+    
+<!-- 
+    i ----negleted the case-sensitive
+    g ----give the full that is if a is present several times then it shows every a
+
+    /M/ ==> pattern
+	i => perform case-sensitive matching
+	g =>perform a global match (find all)
+
+
+expression 			description
+[abc]				find any of the character between the brackets
+[^abc]				find any character NOT between the brackets
+[0-9]				find any of the digit between the brackets
+[^0-9]				find any character NOT between the brackets  (any non digit)
+
+(x/y)				find any of the alternatives saperated with |
+\d 				find a digit
+\s				find a whitespace character
+\w 				fins a word character
+?=n				matches any string that is followed by a specific string n -->
+
+
+    <!-- <script>
+        let str="LEarning JAvascript"
+        let pat=/a/ig
+        var result = str.match(pat);
+
+        document.write(result)
+    </script> -->
+
+<!-- <script>
+    let str="LEarning JAvascript version 2024"
+    
+    //let pat=/a/ig
+    //let pat=/[ae]/ig
+    //let pat=/[^ae]/ig
+    //let pat=/[0-3]/ig
+    //let pat=/[^0-3]/ig
+    //let pat=/[ae]/g
+    //let pat=/[a-z]/g
+    //let pat=/[^a-z \s]/ig
+    let pat=prompt/("enter the letter")/ig
+    var result = str.match(pat);
+
+    document.write(result)
+</script> -->
+
+
+<script>
+    let str="LEarning JAvascript version 2024"
+    
+    //let pat=/a/ig
+    //let pat=/[ae]/ig
+    //let pat=/[^ae]/ig
+    //let pat=/[0-3]/ig
+    //let pat=/[^0-3]/ig
+    //let pat=/[ae]/g
+    //let pat=/[a-z]/g
+    //let pat=/[^a-z \s]/ig
+
+    let userinput = prompt("enter the letter")
+    let pat=new RegExp(userinput, "ig")
+    //let pat=/[a-z]/ig
+    var result = str.match(pat);
+
+     if (result){
+        document.getElementById("p").innerHTML=result
+        
+     }else{
+        alert("null")
+     }
+    
+    
+</script>
+
+
+</body>
+</html>

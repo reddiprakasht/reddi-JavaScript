@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+       async function demo() {
+            return "hello JS"
+        }
+       // console.log(demo())
+
+        demo()
+        .then((x)=>console.log(x))
+        //.catch(()=>console.log("some error"))
+
+    </script>
+
+    <!-- <script>
+        async function getData() {
+            var y = await "hello world";
+            return y
+        }
+        console.log(1)
+        demo().then((val)=>console.log(val))
+        console.log(3)
+    </script> -->
+
+    <script>
+        async function getData() {
+            var y= await "hello world";
+            console.log(y); 
+        }
+        console.log(1);
+        getData();
+        console.log(2)
+    </script>
+
+
+
+</body>
+ 
+</html>
